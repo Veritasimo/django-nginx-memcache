@@ -85,8 +85,7 @@ def get_cache_key(
     ):
     """ Use the request host, request path and
         optional page version to get cache key."""
-    raw_key = u'%s%s&%s=%s' % (
-        request_host,
+    raw_key = u'%s&%s=%s' % (
         request_path,
         cookie_name,
         page_version
