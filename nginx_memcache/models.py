@@ -17,10 +17,10 @@ class CachedPageRecord(models.Model):
     # NB: because the base_cache_key is the primary key,
     # there is no 'id' field on this model
     base_cache_key = models.CharField(
-        max_length=32,  # standard output of hexdigest() on an md5
+        max_length=512,  # standard output of hexdigest() on an md5
         primary_key=True,  # which implies unique=True
         help_text=(
-            "The md5 based on the host and path. This will be " +
+            "This will be " +
             "combined with any prefix and the version to get the " +
             "real cache key stored in memcache"
         )

@@ -90,7 +90,7 @@ def get_cache_key(
         cookie_name,
         page_version
     )
-    return hashlib.md5(raw_key).hexdigest()
+    return raw_key
 
 
 def invalidate_from_request(
