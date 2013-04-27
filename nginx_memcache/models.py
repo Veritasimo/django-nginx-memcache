@@ -17,7 +17,7 @@ class CachedPageRecord(models.Model):
     # NB: because the base_cache_key is the primary key,
     # there is no 'id' field on this model
     base_cache_key = models.CharField(
-        max_length=512,  # standard output of hexdigest() on an md5
+        max_length=255,  # standard output of hexdigest() on an md5
         primary_key=True,  # which implies unique=True
         help_text=(
             "This will be " +
